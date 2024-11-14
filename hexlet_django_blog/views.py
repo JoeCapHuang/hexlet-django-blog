@@ -10,9 +10,9 @@ class HomePageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['who'] = 'World'
         return context
-
-    def get(self, request, *args, **kwargs):
-        return redirect(reverse('article', kwargs={'tags':'Python', 'article_id':42}))
+    # 
+    # def get(self, request, *args, **kwargs):
+    #     return redirect(reverse('article', kwargs={'tags':'Python', 'article_id':42}))
 
 def about(request):
     return render(request, 'about.html')
